@@ -1,0 +1,63 @@
+{
+	"id": "cb6a68d1-5b1f-47f5-83e5-ffc054a8649d",
+	"values": [
+		{
+			"key": "urlechoglobal",
+			"value": "https://postman-echo.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_realm",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_nonce",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "edadGlobal",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "edadAleatoria",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "passwordAleatorio",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "ip",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "current_timestamp",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "tokenfutbol",
+			"value": "843d0877f50f493d86ce35107554b609",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-11-07T20:35:55.047Z",
+	"_postman_exported_using": "Postman/10.19.14"
+}

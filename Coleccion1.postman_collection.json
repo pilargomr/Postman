@@ -1,0 +1,2074 @@
+{
+	"info": {
+		"_postman_id": "ccdb46bd-e79e-48bc-9827-d4dd6e1a25ae",
+		"name": "Coleccion1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30750745"
+	},
+	"item": [
+		{
+			"name": "Servicios GET",
+			"item": [
+				{
+					"name": "Get con parametros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/get?fran=hola&garcia=adios",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "fran",
+									"value": "hola"
+								},
+								{
+									"key": "garcia",
+									"value": "adios"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "HolaAdios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://postman-echo.com/get?fran=hola&garcia=adios",
+									"protocol": "https",
+									"host": [
+										"postman-echo",
+										"com"
+									],
+									"path": [
+										"get"
+									],
+									"query": [
+										{
+											"key": "fran",
+											"value": "hola"
+										},
+										{
+											"key": "garcia",
+											"value": "adios"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"args\": {\n        \"fran\": \"hola\",\n        \"garcia\": \"adios\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-653ace9f-48eb7ba16ea364916d5ca2ad\",\n        \"user-agent\": \"PostmanRuntime/7.34.0\",\n        \"accept\": \"*/*\",\n        \"postman-token\": \"0c7cebdd-2d66-4597-be34-36e259ce97eb\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"sails.sid=s%3A_BZDP9aNytn2Cs-2mcqATSeq3GR9nqAb.A9ai1JbwbfjwgQ4eezE%2BCtItIsuSbS6JA9vaSOEHjiE\"\n    },\n    \"url\": \"https://postman-echo.com/get?fran=hola&garcia=adios\"\n}"
+						},
+						{
+							"name": "MundoCruel",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://postman-echo.com/get?fran=mundo&garcia=cruel",
+									"protocol": "https",
+									"host": [
+										"postman-echo",
+										"com"
+									],
+									"path": [
+										"get"
+									],
+									"query": [
+										{
+											"key": "fran",
+											"value": "mundo"
+										},
+										{
+											"key": "garcia",
+											"value": "cruel"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"args\": {\r\n        \"fran\": \"mundo\",\r\n        \"garcia\": \"cruel\"\r\n    },\r\n    \"headers\": {\r\n        \"x-forwarded-proto\": \"https\",\r\n        \"x-forwarded-port\": \"443\",\r\n        \"host\": \"postman-echo.com\",\r\n        \"x-amzn-trace-id\": \"Root=1-653ace9f-48eb7ba16ea364916d5ca2ad\",\r\n        \"user-agent\": \"PostmanRuntime/7.34.0\",\r\n        \"accept\": \"*/*\",\r\n        \"postman-token\": \"0c7cebdd-2d66-4597-be34-36e259ce97eb\",\r\n        \"accept-encoding\": \"gzip, deflate, br\",\r\n        \"cookie\": \"sails.sid=s%3A_BZDP9aNytn2Cs-2mcqATSeq3GR9nqAb.A9ai1JbwbfjwgQ4eezE%2BCtItIsuSbS6JA9vaSOEHjiE\"\r\n    },\r\n    \"url\": \"https://postman-echo.com/get?fran=hola&garcia=adios\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get sin parametros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/get",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get con ID y cabecera",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "usuario",
+								"value": "Pilar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://postman-echo.com/get?id=1",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get con variables de entorno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get con variables de Globales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlechoglobal}}/get",
+							"host": [
+								"{{urlechoglobal}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get en el padre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request padre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request hijo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://postman-echo.com/get?fran=mundo&garcia=cruel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/get?fran=mundo&garcia=cruel",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "fran",
+									"value": "mundo"
+								},
+								{
+									"key": "garcia",
+									"value": "cruel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemon200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Pokemon200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pokeapi.co/api/v2/pokemon/?limit=200",
+									"protocol": "https",
+									"host": [
+										"pokeapi",
+										"co"
+									],
+									"path": [
+										"api",
+										"v2",
+										"pokemon",
+										""
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "200"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 01:21:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=86400, s-maxage=86400"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"33c8-LJ5ZAVgNIqmfFPeLdpTjhbt1x8M\""
+								},
+								{
+									"key": "function-execution-id",
+									"value": "c5erfny7e6ig"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=31556926"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "fa3ae347fdceb72e9df6e3c42ab305e2"
+								},
+								{
+									"key": "x-country-code",
+									"value": "US"
+								},
+								{
+									"key": "x-orig-accept-language",
+									"value": "en-US,en;q=0.5"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-served-by",
+									"value": "cache-dfw-kdfw8210087-DFW"
+								},
+								{
+									"key": "x-cache",
+									"value": "HIT"
+								},
+								{
+									"key": "x-cache-hits",
+									"value": "1"
+								},
+								{
+									"key": "x-timer",
+									"value": "S1699320069.190808,VS0,VE3"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding,cookie,need-authorization, x-fh-requested-host, accept-encoding"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "MISS"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=U8%2B11l5d6L1%2B3yL8YUKmE62dfslG5mOJZbKKLWlb5ozQD2eHSrXc9sOpbwSoR5%2Ft60aLG7irQk5wPEP9QVWtpltSyHtbzDE7ZR052QrxjARmYUduAO0jJbfeOzFj\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "NEL",
+									"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8221c1ffe88cac4d-QRO"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1292,\n    \"next\": \"https://pokeapi.co/api/v2/pokemon/?offset=200&limit=200\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"bulbasaur\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/1/\"\n        },\n        {\n            \"name\": \"ivysaur\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/2/\"\n        },\n        {\n            \"name\": \"venusaur\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/3/\"\n        },\n        {\n            \"name\": \"charmander\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/4/\"\n        },\n        {\n            \"name\": \"charmeleon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/5/\"\n        },\n        {\n            \"name\": \"charizard\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/6/\"\n        },\n        {\n            \"name\": \"squirtle\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/7/\"\n        },\n        {\n            \"name\": \"wartortle\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/8/\"\n        },\n        {\n            \"name\": \"blastoise\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/9/\"\n        },\n        {\n            \"name\": \"caterpie\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/10/\"\n        },\n        {\n            \"name\": \"metapod\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/11/\"\n        },\n        {\n            \"name\": \"butterfree\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/12/\"\n        },\n        {\n            \"name\": \"weedle\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/13/\"\n        },\n        {\n            \"name\": \"kakuna\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/14/\"\n        },\n        {\n            \"name\": \"beedrill\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/15/\"\n        },\n        {\n            \"name\": \"pidgey\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/16/\"\n        },\n        {\n            \"name\": \"pidgeotto\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/17/\"\n        },\n        {\n            \"name\": \"pidgeot\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/18/\"\n        },\n        {\n            \"name\": \"rattata\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/19/\"\n        },\n        {\n            \"name\": \"raticate\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/20/\"\n        },\n        {\n            \"name\": \"spearow\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/21/\"\n        },\n        {\n            \"name\": \"fearow\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/22/\"\n        },\n        {\n            \"name\": \"ekans\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/23/\"\n        },\n        {\n            \"name\": \"arbok\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/24/\"\n        },\n        {\n            \"name\": \"pikachu\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/25/\"\n        },\n        {\n            \"name\": \"raichu\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/26/\"\n        },\n        {\n            \"name\": \"sandshrew\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/27/\"\n        },\n        {\n            \"name\": \"sandslash\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/28/\"\n        },\n        {\n            \"name\": \"nidoran-f\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/29/\"\n        },\n        {\n            \"name\": \"nidorina\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/30/\"\n        },\n        {\n            \"name\": \"nidoqueen\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/31/\"\n        },\n        {\n            \"name\": \"nidoran-m\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/32/\"\n        },\n        {\n            \"name\": \"nidorino\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/33/\"\n        },\n        {\n            \"name\": \"nidoking\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/34/\"\n        },\n        {\n            \"name\": \"clefairy\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/35/\"\n        },\n        {\n            \"name\": \"clefable\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/36/\"\n        },\n        {\n            \"name\": \"vulpix\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/37/\"\n        },\n        {\n            \"name\": \"ninetales\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/38/\"\n        },\n        {\n            \"name\": \"jigglypuff\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/39/\"\n        },\n        {\n            \"name\": \"wigglytuff\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/40/\"\n        },\n        {\n            \"name\": \"zubat\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/41/\"\n        },\n        {\n            \"name\": \"golbat\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/42/\"\n        },\n        {\n            \"name\": \"oddish\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/43/\"\n        },\n        {\n            \"name\": \"gloom\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/44/\"\n        },\n        {\n            \"name\": \"vileplume\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/45/\"\n        },\n        {\n            \"name\": \"paras\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/46/\"\n        },\n        {\n            \"name\": \"parasect\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/47/\"\n        },\n        {\n            \"name\": \"venonat\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/48/\"\n        },\n        {\n            \"name\": \"venomoth\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/49/\"\n        },\n        {\n            \"name\": \"diglett\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/50/\"\n        },\n        {\n            \"name\": \"dugtrio\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/51/\"\n        },\n        {\n            \"name\": \"meowth\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/52/\"\n        },\n        {\n            \"name\": \"persian\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/53/\"\n        },\n        {\n            \"name\": \"psyduck\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/54/\"\n        },\n        {\n            \"name\": \"golduck\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/55/\"\n        },\n        {\n            \"name\": \"mankey\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/56/\"\n        },\n        {\n            \"name\": \"primeape\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/57/\"\n        },\n        {\n            \"name\": \"growlithe\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/58/\"\n        },\n        {\n            \"name\": \"arcanine\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/59/\"\n        },\n        {\n            \"name\": \"poliwag\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/60/\"\n        },\n        {\n            \"name\": \"poliwhirl\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/61/\"\n        },\n        {\n            \"name\": \"poliwrath\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/62/\"\n        },\n        {\n            \"name\": \"abra\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/63/\"\n        },\n        {\n            \"name\": \"kadabra\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/64/\"\n        },\n        {\n            \"name\": \"alakazam\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/65/\"\n        },\n        {\n            \"name\": \"machop\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/66/\"\n        },\n        {\n            \"name\": \"machoke\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/67/\"\n        },\n        {\n            \"name\": \"machamp\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/68/\"\n        },\n        {\n            \"name\": \"bellsprout\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/69/\"\n        },\n        {\n            \"name\": \"weepinbell\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/70/\"\n        },\n        {\n            \"name\": \"victreebel\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/71/\"\n        },\n        {\n            \"name\": \"tentacool\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/72/\"\n        },\n        {\n            \"name\": \"tentacruel\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/73/\"\n        },\n        {\n            \"name\": \"geodude\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/74/\"\n        },\n        {\n            \"name\": \"graveler\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/75/\"\n        },\n        {\n            \"name\": \"golem\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/76/\"\n        },\n        {\n            \"name\": \"ponyta\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/77/\"\n        },\n        {\n            \"name\": \"rapidash\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/78/\"\n        },\n        {\n            \"name\": \"slowpoke\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/79/\"\n        },\n        {\n            \"name\": \"slowbro\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/80/\"\n        },\n        {\n            \"name\": \"magnemite\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/81/\"\n        },\n        {\n            \"name\": \"magneton\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/82/\"\n        },\n        {\n            \"name\": \"farfetchd\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/83/\"\n        },\n        {\n            \"name\": \"doduo\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/84/\"\n        },\n        {\n            \"name\": \"dodrio\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/85/\"\n        },\n        {\n            \"name\": \"seel\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/86/\"\n        },\n        {\n            \"name\": \"dewgong\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/87/\"\n        },\n        {\n            \"name\": \"grimer\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/88/\"\n        },\n        {\n            \"name\": \"muk\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/89/\"\n        },\n        {\n            \"name\": \"shellder\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/90/\"\n        },\n        {\n            \"name\": \"cloyster\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/91/\"\n        },\n        {\n            \"name\": \"gastly\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/92/\"\n        },\n        {\n            \"name\": \"haunter\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/93/\"\n        },\n        {\n            \"name\": \"gengar\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/94/\"\n        },\n        {\n            \"name\": \"onix\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/95/\"\n        },\n        {\n            \"name\": \"drowzee\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/96/\"\n        },\n        {\n            \"name\": \"hypno\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/97/\"\n        },\n        {\n            \"name\": \"krabby\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/98/\"\n        },\n        {\n            \"name\": \"kingler\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/99/\"\n        },\n        {\n            \"name\": \"voltorb\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/100/\"\n        },\n        {\n            \"name\": \"electrode\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/101/\"\n        },\n        {\n            \"name\": \"exeggcute\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/102/\"\n        },\n        {\n            \"name\": \"exeggutor\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/103/\"\n        },\n        {\n            \"name\": \"cubone\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/104/\"\n        },\n        {\n            \"name\": \"marowak\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/105/\"\n        },\n        {\n            \"name\": \"hitmonlee\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/106/\"\n        },\n        {\n            \"name\": \"hitmonchan\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/107/\"\n        },\n        {\n            \"name\": \"lickitung\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/108/\"\n        },\n        {\n            \"name\": \"koffing\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/109/\"\n        },\n        {\n            \"name\": \"weezing\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/110/\"\n        },\n        {\n            \"name\": \"rhyhorn\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/111/\"\n        },\n        {\n            \"name\": \"rhydon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/112/\"\n        },\n        {\n            \"name\": \"chansey\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/113/\"\n        },\n        {\n            \"name\": \"tangela\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/114/\"\n        },\n        {\n            \"name\": \"kangaskhan\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/115/\"\n        },\n        {\n            \"name\": \"horsea\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/116/\"\n        },\n        {\n            \"name\": \"seadra\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/117/\"\n        },\n        {\n            \"name\": \"goldeen\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/118/\"\n        },\n        {\n            \"name\": \"seaking\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/119/\"\n        },\n        {\n            \"name\": \"staryu\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/120/\"\n        },\n        {\n            \"name\": \"starmie\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/121/\"\n        },\n        {\n            \"name\": \"mr-mime\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/122/\"\n        },\n        {\n            \"name\": \"scyther\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/123/\"\n        },\n        {\n            \"name\": \"jynx\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/124/\"\n        },\n        {\n            \"name\": \"electabuzz\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/125/\"\n        },\n        {\n            \"name\": \"magmar\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/126/\"\n        },\n        {\n            \"name\": \"pinsir\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/127/\"\n        },\n        {\n            \"name\": \"tauros\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/128/\"\n        },\n        {\n            \"name\": \"magikarp\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/129/\"\n        },\n        {\n            \"name\": \"gyarados\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/130/\"\n        },\n        {\n            \"name\": \"lapras\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/131/\"\n        },\n        {\n            \"name\": \"ditto\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/132/\"\n        },\n        {\n            \"name\": \"eevee\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/133/\"\n        },\n        {\n            \"name\": \"vaporeon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/134/\"\n        },\n        {\n            \"name\": \"jolteon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/135/\"\n        },\n        {\n            \"name\": \"flareon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/136/\"\n        },\n        {\n            \"name\": \"porygon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/137/\"\n        },\n        {\n            \"name\": \"omanyte\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/138/\"\n        },\n        {\n            \"name\": \"omastar\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/139/\"\n        },\n        {\n            \"name\": \"kabuto\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/140/\"\n        },\n        {\n            \"name\": \"kabutops\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/141/\"\n        },\n        {\n            \"name\": \"aerodactyl\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/142/\"\n        },\n        {\n            \"name\": \"snorlax\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/143/\"\n        },\n        {\n            \"name\": \"articuno\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/144/\"\n        },\n        {\n            \"name\": \"zapdos\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/145/\"\n        },\n        {\n            \"name\": \"moltres\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/146/\"\n        },\n        {\n            \"name\": \"dratini\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/147/\"\n        },\n        {\n            \"name\": \"dragonair\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/148/\"\n        },\n        {\n            \"name\": \"dragonite\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/149/\"\n        },\n        {\n            \"name\": \"mewtwo\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/150/\"\n        },\n        {\n            \"name\": \"mew\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/151/\"\n        },\n        {\n            \"name\": \"chikorita\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/152/\"\n        },\n        {\n            \"name\": \"bayleef\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/153/\"\n        },\n        {\n            \"name\": \"meganium\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/154/\"\n        },\n        {\n            \"name\": \"cyndaquil\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/155/\"\n        },\n        {\n            \"name\": \"quilava\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/156/\"\n        },\n        {\n            \"name\": \"typhlosion\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/157/\"\n        },\n        {\n            \"name\": \"totodile\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/158/\"\n        },\n        {\n            \"name\": \"croconaw\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/159/\"\n        },\n        {\n            \"name\": \"feraligatr\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/160/\"\n        },\n        {\n            \"name\": \"sentret\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/161/\"\n        },\n        {\n            \"name\": \"furret\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/162/\"\n        },\n        {\n            \"name\": \"hoothoot\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/163/\"\n        },\n        {\n            \"name\": \"noctowl\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/164/\"\n        },\n        {\n            \"name\": \"ledyba\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/165/\"\n        },\n        {\n            \"name\": \"ledian\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/166/\"\n        },\n        {\n            \"name\": \"spinarak\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/167/\"\n        },\n        {\n            \"name\": \"ariados\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/168/\"\n        },\n        {\n            \"name\": \"crobat\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/169/\"\n        },\n        {\n            \"name\": \"chinchou\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/170/\"\n        },\n        {\n            \"name\": \"lanturn\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/171/\"\n        },\n        {\n            \"name\": \"pichu\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/172/\"\n        },\n        {\n            \"name\": \"cleffa\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/173/\"\n        },\n        {\n            \"name\": \"igglybuff\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/174/\"\n        },\n        {\n            \"name\": \"togepi\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/175/\"\n        },\n        {\n            \"name\": \"togetic\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/176/\"\n        },\n        {\n            \"name\": \"natu\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/177/\"\n        },\n        {\n            \"name\": \"xatu\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/178/\"\n        },\n        {\n            \"name\": \"mareep\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/179/\"\n        },\n        {\n            \"name\": \"flaaffy\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/180/\"\n        },\n        {\n            \"name\": \"ampharos\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/181/\"\n        },\n        {\n            \"name\": \"bellossom\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/182/\"\n        },\n        {\n            \"name\": \"marill\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/183/\"\n        },\n        {\n            \"name\": \"azumarill\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/184/\"\n        },\n        {\n            \"name\": \"sudowoodo\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/185/\"\n        },\n        {\n            \"name\": \"politoed\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/186/\"\n        },\n        {\n            \"name\": \"hoppip\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/187/\"\n        },\n        {\n            \"name\": \"skiploom\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/188/\"\n        },\n        {\n            \"name\": \"jumpluff\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/189/\"\n        },\n        {\n            \"name\": \"aipom\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/190/\"\n        },\n        {\n            \"name\": \"sunkern\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/191/\"\n        },\n        {\n            \"name\": \"sunflora\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/192/\"\n        },\n        {\n            \"name\": \"yanma\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/193/\"\n        },\n        {\n            \"name\": \"wooper\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/194/\"\n        },\n        {\n            \"name\": \"quagsire\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/195/\"\n        },\n        {\n            \"name\": \"espeon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/196/\"\n        },\n        {\n            \"name\": \"umbreon\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/197/\"\n        },\n        {\n            \"name\": \"murkrow\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/198/\"\n        },\n        {\n            \"name\": \"slowking\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/199/\"\n        },\n        {\n            \"name\": \"misdreavus\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/200/\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Servicios POST",
+			"item": [
+				{
+					"name": "Post con formulario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Pilar",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "Gomez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://postman-echo.com/post",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post con RAW",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Esto es un texto de prueba",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo.com/post",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post con JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Pilar\",\r\n    \"apellido\":\"Gomez\",\r\n    \"edad\":47\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo.com/post",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post con Array",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\":20,\r\n    \"cliente\":\"Pilar Gomez\",\r\n    \"productos\":[\r\n        {\r\n            \"id\":1,\r\n            \"cantidad\":5\r\n        },\r\n        {\r\n            \"id\":25,\r\n            \"cantidad\":1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo.com/post",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servicios PUT y DELETE",
+			"item": [
+				{
+					"name": "Ejemplo PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5,\r\n    \"descripcion\":\"Televisión 55 pulgadas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo.com/put",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"put"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ejemplo Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://postman-echo.com/delete",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Variables dinamicas",
+			"item": [
+				{
+					"name": "Randomint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get?param1={{$randomInt}}",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "param1",
+									"value": "{{$randomInt}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GUID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"{{$guid}}\",\r\n    \"nombre\":\"Tele\",\r\n    \"cantidad\":{{$randomInt}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlecho}}/post",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Multiples variables dinamicas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"{{$guid}}\",\r\n    \"nombre\":\"{{$randomAlphaNumeric}}\",\r\n    \"cuenta\":{{$randomBankAccount}},\r\n    \"cantidad\":{{$randomInt}},\r\n    \"fecha\":{{$timestamp}},\r\n    \"username\":\"{{$randomUserName}}\",\r\n    \"nombrereal\":\"{{$randomFirstName}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlecho}}/post",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Metodos de autenticacion",
+			"item": [
+				{
+					"name": "Basic-Auth",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/basic-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"basic-auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bearer con Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1234pily",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlhttpbin}}/bearer",
+							"host": [
+								"{{urlhttpbin}}"
+							],
+							"path": [
+								"bearer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OAuth1",
+					"request": {
+						"auth": {
+							"type": "oauth1",
+							"oauth1": [
+								{
+									"key": "consumerSecret",
+									"value": "D+EdQ-gs$-%@2Nu7",
+									"type": "string"
+								},
+								{
+									"key": "consumerKey",
+									"value": "RKCGzna7bv9YD57c",
+									"type": "string"
+								},
+								{
+									"key": "signatureMethod",
+									"value": "HMAC-SHA1",
+									"type": "string"
+								},
+								{
+									"key": "version",
+									"value": "1.0",
+									"type": "string"
+								},
+								{
+									"key": "addParamsToHeader",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "addEmptyParamsToSign",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/oauth1",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"oauth1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hawk Auth",
+					"request": {
+						"auth": {
+							"type": "hawk",
+							"hawk": [
+								{
+									"key": "authKey",
+									"value": "werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn",
+									"type": "string"
+								},
+								{
+									"key": "authId",
+									"value": "dh37fgj492je",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "sha256",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/auth/hawk",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"auth",
+								"hawk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Utilidades",
+			"item": [
+				{
+					"name": "Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/status/200",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"status",
+								"200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status con parametros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/status/:id",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"status",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stream",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/stream/5",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"stream",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/delay/2",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"delay",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UTF8",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/encoding/utf8",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"encoding",
+								"utf8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/ip",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"ip"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Utilidades de fecha y hora",
+			"item": [
+				{
+					"name": "Now",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/now",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"now"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fecha correcta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/valid?timestamp=2013-02-29",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"valid"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2013-02-29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dia Semana",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/unit?timestamp=2023-10-26&unit=day",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"unit"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "unit",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sumar Tiempo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/add?timestamp=2023-10-26&hours=20",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"add"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "hours",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restar Tiempo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/subtract?timestamp=2023-10-26&months=2",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"subtract"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "months",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/start?timestamp=2023-10-26&unit=months",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"start"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "unit",
+									"value": "months"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Partir Fecha y Hora",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/object?timestamp=2023-10-26 06:34",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"object"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26 06:34"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anterior",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/before?timestamp=2023-10-26&target=2023-10-27",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"before"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "target",
+									"value": "2023-10-27"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Posterior",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/after?timestamp=2023-10-26&target=2023-10-24",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"after"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "target",
+									"value": "2023-10-24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Entre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/between?timestamp=2023-10-26&start=2023-10-24&end=2023-10-28",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"between"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "start",
+									"value": "2023-10-24"
+								},
+								{
+									"key": "end",
+									"value": "2023-10-28"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bisiesto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/time/leap?timestamp=2024-02-06",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"time",
+								"leap"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "2024-02-06"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transform",
+			"item": [
+				{
+					"name": "Transform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/ransform/collection?from=1&to=2",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"ransform",
+								"collection"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1"
+								},
+								{
+									"key": "to",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cookies",
+			"item": [
+				{
+					"name": "Obtener Cookies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/cookies",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"cookies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Cookies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/cookies/delete?param1",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"cookies",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "param1",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir Cookies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/cookies/set?param1=pilar&param2=gomez",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"cookies",
+								"set"
+							],
+							"query": [
+								{
+									"key": "param1",
+									"value": "pilar"
+								},
+								{
+									"key": "param2",
+									"value": "gomez"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tests",
+			"item": [
+				{
+					"name": "Prueba Get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Test que comprueba llamada correcta\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"deflate\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prueba Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData;\r",
+									"\r",
+									"pm.test(\"Resultados del JSON\", function () {\r",
+									"    jsonData = pm.response.json();\r",
+									"    console.log(jsonData);\r",
+									"    pm.expect(jsonData.url).to.eql(\"https://postman-echo.com/post\");\r",
+									"    pm.expect(jsonData.data.nombre).to.eql(\"Pilar\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Resultados2 del JSON\", function () {\r",
+									"    jsonData = pm.response.json();\r",
+									"    console.log(jsonData);\r",
+									"    pm.expect(jsonData.json.edad).to.eql(47);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Codigo 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Recibo cadena con el campo doble\", function () {\r",
+									"    jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.json.nombre).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Recibo cadena con numeros\", function () {\r",
+									"    jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.json.edad).to.be.a('number');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Ejemplos propiedades, Chai Assertion\", function () {\r",
+									"    jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.json.edad).to.be.a('number'); //la edad debe ser numerico\r",
+									"    pm.expect(jsonData.json.edad).to.not.be.a('string'); //la edad no debe ser cadena\r",
+									"    pm.expect(jsonData).to.have.a.property('args'); //busca propiedades en el JSon\r",
+									"    pm.expect(jsonData.json.nombre).to.include('ila'); //el nombre debe incluir ila\r",
+									"    pm.expect(true).to.be.true; //espera resultados booleanos\r",
+									"    pm.expect([1, 2, 3]).to.include.members([1, 2]); //espera que dentro de los valores 1,2,3 incluya los valores 1,2\r",
+									"    pm.expect(jsonData.args).to.be.empty; //espera que el campo args este vacio\r",
+									"    pm.expect(jsonData.data).not.to.be.empty; //espera que el campo data no este vacio\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Pilar\",\r\n    \"apellido\":\"Gomez\",\r\n    \"edad\":47\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlecho}}/post",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tiempo de respuesta",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Respuesta menor a 3000 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El cuerpo de la respuesta es\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include('{\\n  \"delay\": \"2\"\\n}');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Etag is present\", function () {\r",
+									"    pm.response.to.have.header(\"Etag\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Tiena cadena OK\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/delay/2",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"delay",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comparar codigo en lista",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/status/201",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"status",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mas de Chai Assertion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData;\r",
+									"\r",
+									"pm.test(\"Chai Assertion\", function () {\r",
+									"    jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.json.nombre).to.have.lengthOf(5);\r",
+									"    pm.expect(jsonData.json.nombre).to.have.lengthOf.above(2);\r",
+									"    pm.expect(jsonData.json.nombre).to.have.lengthOf.below(6);\r",
+									"    pm.expect(jsonData.json.nombre).to.have.lengthOf.within(3,20);  \r",
+									"    pm.expect(jsonData.json.nombre).to.match(/^Pi/); //cuando queremos que el comienzo de la cadena sea Pi\r",
+									"    pm.expect(jsonData.json.nombre).to.match(/il/); //cuando queremos que contenga algo en la cadena\r",
+									"    pm.expect(jsonData.json.nombre).to.not.match(/e/); //cuando queremos que la cadena no tenga e\r",
+									"    pm.expect(jsonData.json.edad).to.be.closeTo(45, 5); //cuando queremos q la edad sea 45 pero rango 5 arriba o abajo\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Pilar\",\r\n    \"apellido\":\"Gomez\",\r\n    \"edad\":47\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlecho}}/post",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Testeando un XML",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonObject = xml2Json(responseBody); //el objeto jsonObject va a tomar el valor del resultado en xml\r",
+									"console.log(jsonObject); //para mostrar en consola\r",
+									"\r",
+									"pm.test(\"Your test name\", function () {\r",
+									"    pm.expect(jsonObject.slideshow.$.title).to.eql(\"Sample Slide Show\"); //comparamos que si contenga lo que queremos\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlhttpbin}}/xml",
+							"host": [
+								"{{urlhttpbin}}"
+							],
+							"path": [
+								"xml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Testeando un TXT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"deny\"); //cuando recibimos una respuesta tipo texto y queremos comprobar que tiene la cadena que necesitamos\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlhttpbin}}/robots.txt",
+							"host": [
+								"{{urlhttpbin}}"
+							],
+							"path": [
+								"robots.txt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear variables en tiempo de ejecucion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"nombreEntorno\", jsonData.json.nombre); //crea la var de entorno\r",
+									"\r",
+									"pm.globals.set(\"edadGlobal\", jsonData.json.edad); //crea la variable global\r",
+									"\r",
+									"//para validad la salida ir a Enrironment Quick Look (al lado de los environments, boton superior derecho)\r",
+									"//si las variables existen entonces solo reemplaza el valor\r",
+									"\r",
+									"console.log(pm.environment.get(\"nombreEntorno\")); //para imprimir los datos en consola\r",
+									"console.log(pm.globals.get(\"edadGlobal\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Pilar\",\r\n    \"apellido\":\"Gomez\",\r\n    \"edad\":47\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlecho}}/post?",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pre-request script",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//el pre-request script se ejecuta antes q la peticion (la instruccion que esta arriba al lado del post)\r",
+									"//despues se ejecuta el test\r",
+									"\r",
+									"\r",
+									"const edad = Math.floor((Math.random()*100)+1);\r",
+									"//la funcion math.random (JavaScript) da valores entre 0 y 1 por lo q se *100 para tener una edad y se le suma 1 para q no sea 0 y se tiene q redondear al numero anterior\r",
+									"\r",
+									"console.log(\"edad\", edad); //asi verificamos q si esta generando edades aleatorias correctamente\r",
+									"\r",
+									"pm.globals.set(\"edadAleatoria\", edad); //crea la var global con el valor de edad\r",
+									"\r",
+									"//ver el body que utiliza la variable global en lugar q se pase como parametro fijo\r",
+									"\r",
+									"let password = Math.random().toString(36).substr(2, 5);\r",
+									"console.log(\"random\",password);\r",
+									"//esta funcion crea un numero aleatorio y lo parte y coje solo 5 q despues convierte a letras\r",
+									"pm.globals.set(\"passwordAleatorio\", password); //crea var global con el valor de pw"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Your test name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.json.edad).to.eql(pm.globals.get(\"edadAleatoria\"));\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Pilar\",\r\n    \"apellido\":\"Gomez\",\r\n    \"edad\":{{edadAleatoria}},\r\n    \"cantidad\":{{$randomInt}},\r\n    \"codigo\":\"{{$guid}}\",\r\n    \"password\":\"{{passwordAleatorio}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlecho}}/post",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar peticion dentro de Pre-request script",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//el pre-request script se ejecuta antes q la peticion (la instruccion que esta arriba al lado del post)\r",
+									"//despues se ejecuta el test\r",
+									"\r",
+									"\r",
+									"const edad = Math.floor((Math.random()*100)+1);\r",
+									"//la funcion math.random (JavaScript) da valores entre 0 y 1 por lo q se *100 para tener una edad y se le suma 1 para q no sea 0 y se tiene q redondear al numero anterior\r",
+									"\r",
+									"console.log(\"edad\", edad); //asi verificamos q si esta generando edades aleatorias correctamente\r",
+									"\r",
+									"pm.globals.set(\"edadAleatoria\", edad); //crea la var global con el valor de edad\r",
+									"\r",
+									"//ver el body que utiliza la variable global en lugar q se pase como parametro fijo\r",
+									"\r",
+									"let password = Math.random().toString(36).substr(2, 5);\r",
+									"console.log(\"random\",password);\r",
+									"//esta funcion crea un numero aleatorio y lo parte y coje solo 5 q despues convierte a letras\r",
+									"pm.globals.set(\"passwordAleatorio\", password); //crea var global con el valor de pw\r",
+									"\r",
+									"//trae la ip de la url dada, la imprime en consola y la pasa a la var global \"ip\"\r",
+									"pm.sendRequest(\"https://postman-echo.com/ip\", function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"    var jsonData = response.json();\r",
+									"    pm.globals.set(\"ip\", jsonData.ip);\r",
+									"});\r",
+									"\r",
+									"//TAREA pasar la fecha del NOW. coger cadena de texto, pasarla a una var y usarla\r",
+									"var current_timestamp = new Date();\r",
+									"postman.setGlobalVariable(\"current_timestamp\", current_timestamp.toISOString());\r",
+									"console.log(\"current_timestamp\", current_timestamp.toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Your test name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.json.edad).to.eql(pm.globals.get(\"edadAleatoria\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Pilar\",\r\n    \"apellido\":\"Gomez\",\r\n    \"edad\":{{edadAleatoria}},\r\n    \"cantidad\":{{$randomInt}},\r\n    \"codigo\":\"{{$guid}}\",\r\n    \"password\":\"{{passwordAleatorio}}\",\r\n    \"ip\":\"{{ip}}\",\r\n    \"ActivityDateTime\": \"{{current_timestamp}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlecho}}/post",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mis Tests",
+			"item": [
+				{
+					"name": "Uso de var misTests",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"eval(pm.environment.get(\"misTests\"))(); //esta variable es de environment por lo q esta definida en el TC Reutilizar test comunes y se puede llamar desde cualquier test dentro del mismo environment"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get?usuario=:usuario",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "usuario",
+									"value": ":usuario"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reutilizar tests comunes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"//aqui se crea un bloque anonimo y se asigna a una variable\r",
+									"var mistests = () => { \r",
+									"    pm.test(\"Status code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"    });\r",
+									"\r",
+									"    pm.test(\"Response time is less than 300ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"    });\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"misTests\", mistests.toString()); // la variable de environment toma el valor de misTest q se pasa a una cadena\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"eval(pm.environment.get(\"misTests\"))(); //la funcion eval ejecuta lo que coja de la variable (osea ejecuta lo q esta en pre-request)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WorkFlow",
+			"item": [
+				{
+					"name": "Peticion1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peticion2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Peticion4\");\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peticion3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(null);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peticion4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Peticion3\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlecho}}/get",
+							"host": [
+								"{{urlecho}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
